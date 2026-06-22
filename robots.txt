@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://guri-si-massage.pages.dev/sitemap.xml
+Sitemap: https://guri-si-massage.pages.dev/feed.xml

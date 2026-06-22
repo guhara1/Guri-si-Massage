@@ -5,6 +5,11 @@ from .pricing import PRICING
 
 _GURI_URL = BASE_URL.rstrip("/") + GURI
 
+# 사이트 소유 확인 메타 태그 (메인 페이지에만 노출)
+_VERIFY = (
+    '<meta name="naver-site-verification" content="9f874f2be919e29e956eb0fa96bd6e220d88c2f0">\n'
+)
+
 # 오프라인 사업장 주소가 없는 방문형 사이트이므로 LocalBusiness 계열은 쓰지 않는다.
 # Organization·WebPage·BreadcrumbList 는 build.py 가 전 페이지에 자동 삽입하고,
 # 메인 페이지에는 FAQPage 만 추가한다.
@@ -144,7 +149,7 @@ PAGE = {
     "desc": "구리시 출장마사지·홈타이 예약 전 구리역, 갈매동, 인창동, 교문동, 수택동 생활권을 확인하세요.",
     "h1": "구리시 출장마사지 · 구리시 홈타이 지역별 예약 안내",
     "body": _BODY,
-    "extra_head": _JSONLD,
+    "extra_head": _VERIFY + _JSONLD,
     "breadcrumb": [],
     "hero": _HERO,
 }

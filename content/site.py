@@ -13,6 +13,10 @@ TELEGRAM_PARTNER = "https://t.me/googleseolab"     # 제휴문의
 # 구리 사이트 루트 경로 (모든 페이지가 이 접두사 아래에 위치)
 GURI = "/"
 
+# IndexNow 키 — 빙·네이버·얀덱스에 즉시 색인 통보용.
+# build.py 가 루트에 "{INDEXNOW_KEY}.txt" 파일을 생성하고, tools/indexnow.py 가 이 키로 통보한다.
+INDEXNOW_KEY = "49a367c54cb03db16835dd2a709d42c9"
+
 # 상단 메뉴 — 메뉴명과 URL에는 "출장마사지"를 반복하지 않는다.
 # 키워드는 SEO Title·H1·본문 첫 문단에서만 자연스럽게 사용한다.
 NAV = [

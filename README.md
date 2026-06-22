@@ -47,3 +47,38 @@ python3 build.py
 1. `content/site.py`의 `BASE_URL`을 실제 도메인으로 변경
 2. `python3 build.py` 재실행 (canonical·sitemap·robots.txt·구조화 데이터에 반영됨)
 3. Google Search Console에 `sitemap.xml` 제출
+
+## 색인 통보 (네이버·구글·빙 빠른 인덱싱)
+
+빌드 시 자동 생성되는 파일:
+
+- `sitemap.xml` — `lastmod`/`changefreq`/`priority` 포함
+- `feed.xml` — RSS 2.0 피드 (모든 `<head>`에 자동 발견 링크 삽입)
+- `robots.txt` — 위 두 사이트맵 명시
+- `{INDEXNOW_KEY}.txt` — IndexNow 소유 확인 키 파일
+
+### 1) 검색엔진 등록 (최초 1회)
+
+- **네이버 서치어드바이저**: 사이트 등록 → 메인 페이지의 `naver-site-verification` 메타로 소유확인 → `sitemap.xml`·`feed.xml` 제출
+- **구글 Search Console**: 사이트 등록 → `sitemap.xml` 제출
+- **빙 웹마스터도구**: 사이트 등록 → `sitemap.xml` 제출 (IndexNow 자동 연동)
+
+### 2) IndexNow — 글 올릴 때마다 즉시 통보 (빙·네이버·얀덱스)
+
+배포 후 `https://도메인/{INDEXNOW_KEY}.txt` 가 열리는지 확인한 뒤:
+
+```bash
+python tools/indexnow.py                 # 첫 일괄 통보: sitemap 의 전체 URL
+python tools/indexnow.py https://도메인/새글/   # 신규/수정 페이지만 통보
+```
+
+### 3) 구글 즉시 통보 (선택, IndexNow 미참여)
+
+서비스 계정 설정 후:
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=/path/service-account.json
+python tools/google_indexing.py
+```
+
+자세한 사전 설정은 `tools/google_indexing.py` 상단 주석 참고. (구글 정식 경로는 Search Console 색인 요청·사이트맵이며, sitemap ping 은 2023년 폐지됨.)

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.barogo-guri.example.com/sitemap.xml
+Sitemap: https://guri-si-massage.pages.dev/sitemap.xml

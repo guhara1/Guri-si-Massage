@@ -14,7 +14,7 @@ _CTA = f"""
 # RESERVATION — 예약 안내
 # ─────────────────────────────────────────────
 RESERVATION = {
-    "path": "gyeonggi/guri/reservation/",
+    "path": "reservation/",
     "title": "예약 안내｜구리시 출장마사지·홈타이 방문 예약 절차",
     "desc": "구리시 출장마사지·홈타이 예약 방법, 가능 시간, 방문 장소, 결제·취소 기준을 안내합니다.",
     "h1": "구리시 출장마사지 예약 안내",
@@ -31,13 +31,13 @@ RESERVATION = {
 <ol>
 <li>① 전화 상담 — 표시된 번호로 연락해 원하는 날짜와 시간대를 말씀해 주세요.</li>
 <li>② 방문 지역 확인 — 구리시 내 동·생활권을 확인하여 이동 가능 여부를 안내합니다. 지역은
-<a href="/gyeonggi/guri/region/">구리 지역별 안내</a>에서 미리 확인하실 수 있습니다.</li>
+<a href="/region/">구리 지역별 안내</a>에서 미리 확인하실 수 있습니다.</li>
 <li>③ 일정 조율 — 가능한 방문 시간대를 함께 맞춥니다. 원하시는 시간이 마감된 경우 가까운
 대안 시간을 제안해 드립니다.</li>
 <li>④ 방문 장소 안내 — 자택·숙소·사무실 인근 등 방문 장소와 도착 예상 시간을 공유합니다.</li>
 <li>⑤ 방문 및 확인 — 약속한 시간에 방문하여 사전에 안내된 내용대로 진행합니다.</li>
 </ol>
-<p>예약 전 준비사항은 <a href="/gyeonggi/guri/guide/">이용 전 확인사항</a>에서 함께
+<p>예약 전 준비사항은 <a href="/guide/">이용 전 확인사항</a>에서 함께
 확인하시면 더 매끄럽게 진행됩니다.</p>
 </section>
 
@@ -55,9 +55,9 @@ RESERVATION = {
 방문 장소로, 정확한 동·호수와 공동현관 출입 방법을 미리 알려주시면 도착이 빨라집니다.
 숙소는 객실 번호와 프런트 위치를 확인해 주세요. 사무실 인근은 건물 진입과 주차가 가능한지
 사전에 확인이 필요합니다. 장소별 준비사항은
-<a href="/gyeonggi/guri/guide/#home">자택</a> ·
-<a href="/gyeonggi/guri/guide/#stay">숙소</a> ·
-<a href="/gyeonggi/guri/guide/#office">사무실</a> 안내를 참고하세요.</p>
+<a href="/guide/#home">자택</a> ·
+<a href="/guide/#stay">숙소</a> ·
+<a href="/guide/#office">사무실</a> 안내를 참고하세요.</p>
 </section>
 
 <section id="move">
@@ -65,8 +65,8 @@ RESERVATION = {
 <p>구리시 내 방문은 기본 안내 기준에 따라 진행되며, 다산·도농·별내 등 인접 생활권으로
 차량 이동이 필요한 경우에는 거리와 시간에 따라 추가 이동비가 발생할 수 있습니다. 추가
 이동비는 예약 상담 단계에서 미리 안내해 드리며, 방문 후 임의로 추가되지 않습니다.
-지역별 이동 기준은 <a href="/gyeonggi/guri/hometai-guide/#move">홈타이 지역별 이동 기준</a>과
-<a href="/gyeonggi/guri/station/">역세권 안내</a>에서 더 자세히 확인하실 수 있습니다.
+지역별 이동 기준은 <a href="/hometai-guide/#move">홈타이 지역별 이동 기준</a>과
+<a href="/station/">역세권 안내</a>에서 더 자세히 확인하실 수 있습니다.
 구리시 행정 구역 정보는 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청</a>
 홈페이지에서도 살펴보실 수 있습니다.</p>
 </section>
@@ -84,7 +84,7 @@ RESERVATION = {
 <p>일정 변경이나 취소가 필요한 경우 가능한 한 빨리 연락해 주세요. 방문 준비와 이동이 이미
 시작된 직전 시점의 취소는 다른 고객의 예약 기회에도 영향을 주므로, 변경이 예상되면 미리
 알려주시는 것이 좋습니다. 무단 취소나 연락 두절이 반복되면 이후 예약이 제한될 수 있습니다.
-자세한 기준은 <a href="/gyeonggi/guri/terms/">이용약관</a>을 참고하세요.</p>
+자세한 기준은 <a href="/terms/">이용약관</a>을 참고하세요.</p>
 </section>
 
 <section id="prepare">
@@ -129,7 +129,7 @@ RESERVATION = {
 # GUIDE — 이용 전 확인사항
 # ─────────────────────────────────────────────
 GUIDE = {
-    "path": "gyeonggi/guri/guide/",
+    "path": "guide/",
     "title": "이용 전 확인사항｜구리시 출장마사지·홈타이 방문 준비",
     "desc": "구리시 출장마사지 방문 전 주소 확인, 자택·숙소·사무실 준비사항과 개인정보 기준 안내.",
     "h1": "구리시 출장마사지 이용 전 확인사항",
@@ -144,10 +144,10 @@ GUIDE = {
 <h2>방문 가능 주소 확인</h2>
 <p>방문 전에는 정확한 주소가 필요합니다. 도로명 주소와 함께 건물명, 동·호수, 공동현관 출입
 방법을 알려주시면 도착이 빨라지고 헤매는 일이 줄어듭니다. 구리시 내 동·생활권은
-<a href="/gyeonggi/guri/region/">지역별 안내</a>와 <a href="/gyeonggi/guri/area/">생활권 안내</a>에서
-확인할 수 있으며, 대표 지역으로는 <a href="/gyeonggi/guri/sutaek-dong/">수택동</a>,
-<a href="/gyeonggi/guri/inchang-dong/">인창동</a>, <a href="/gyeonggi/guri/galmae-dong/">갈매동</a>
-등이 있습니다. 가까운 역 기준 위치는 <a href="/gyeonggi/guri/station/">역세권 안내</a>를
+<a href="/region/">지역별 안내</a>와 <a href="/area/">생활권 안내</a>에서
+확인할 수 있으며, 대표 지역으로는 <a href="/sutaek-dong/">수택동</a>,
+<a href="/inchang-dong/">인창동</a>, <a href="/galmae-dong/">갈매동</a>
+등이 있습니다. 가까운 역 기준 위치는 <a href="/station/">역세권 안내</a>를
 참고하세요.</p>
 </section>
 
@@ -176,7 +176,7 @@ GUIDE = {
 <h2>개인정보 처리 기준</h2>
 <p>예약 과정에서 수집되는 정보는 방문 안내에 필요한 최소한으로 제한되며, 방문이 종료되면
 지체 없이 파기됩니다. 수집 항목과 보관·파기 기준은
-<a href="/gyeonggi/guri/privacy/">개인정보 처리방침</a>에서 자세히 확인하실 수 있습니다.
+<a href="/privacy/">개인정보 처리방침</a>에서 자세히 확인하실 수 있습니다.
 개인정보 보호에 관한 일반 안내는
 <a href="https://www.privacy.go.kr" target="_blank" rel="noopener nofollow">개인정보보호 종합포털</a>도
 참고하실 수 있습니다.</p>
@@ -188,7 +188,7 @@ GUIDE = {
 선정적·성적 서비스 요청은 어떠한 경우에도 제공되지 않으며, 이러한 요청이 있을 경우 방문과
 예약은 즉시 중단됩니다. 고객과 관리사 모두의 안전을 위해 음주 상태에서의 무리한 요청,
 폭언, 신변 위협 등은 금지되며, 상호 존중을 전제로 진행됩니다. 안전한 이용을 위한 추가
-기준은 <a href="/gyeonggi/guri/terms/">이용약관</a>을 함께 확인해 주세요. 구리시 관련 행정
+기준은 <a href="/terms/">이용약관</a>을 함께 확인해 주세요. 구리시 관련 행정
 정보는 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청</a>에서도
 확인하실 수 있습니다.</p>
 </section>
@@ -222,7 +222,7 @@ GUIDE = {
 더 쾌적하게 진행할 수 있습니다. 건강 상태에 변동이 있거나 피부에 상처·염증이 있는 경우,
 혹은 최근 수술이나 치료를 받은 부위가 있다면 진행 전에 미리 알려주세요. 무리가 가지 않는
 범위에서 진행하기 위한 안내이며, 상태에 따라 일부 부위를 피하거나 강도를 조절할 수
-있습니다. 안전과 관련한 기본 원칙은 <a href="/gyeonggi/guri/terms/">이용약관</a>에서도
+있습니다. 안전과 관련한 기본 원칙은 <a href="/terms/">이용약관</a>에서도
 확인하실 수 있습니다.</p>
 </section>
 
@@ -243,7 +243,7 @@ GUIDE = {
 # HOMETAI — 홈타이 이용 가이드
 # ─────────────────────────────────────────────
 HOMETAI = {
-    "path": "gyeonggi/guri/hometai-guide/",
+    "path": "hometai-guide/",
     "title": "홈타이 이용 가이드｜구리시 출장마사지·홈타이 차이와 기준",
     "desc": "홈타이란 무엇인지, 출장마사지와의 차이, 구리시 이용 기준과 지역별 이동 기준을 안내합니다.",
     "h1": "구리시 홈타이 이용 가이드",
@@ -267,27 +267,27 @@ HOMETAI = {
 환경을, 출장마사지는 자택뿐 아니라 사무실 인근 등 보다 다양한 장소로의 방문을 강조하는
 표현으로 쓰입니다. 실제 진행 방식과 준비사항은 대체로 동일하므로, 명칭보다 방문 장소와
 일정을 기준으로 선택하시면 됩니다. 장소별 준비사항은
-<a href="/gyeonggi/guri/guide/">이용 전 확인사항</a>에서 확인하세요.</p>
+<a href="/guide/">이용 전 확인사항</a>에서 확인하세요.</p>
 </section>
 
 <section id="standard">
 <h2>구리시 홈타이 이용 전 기준</h2>
 <p>구리시에서 홈타이를 이용하시기 전에는 방문 주소, 출입 방법, 진행 가능한 공간을 미리
 확인해 두시는 것이 좋습니다. 정확한 주소와 출입 정보를 준비하면 도착 시간이 단축되고
-진행이 매끄럽습니다. 예약 절차 전반은 <a href="/gyeonggi/guri/reservation/">예약 안내</a>를
+진행이 매끄럽습니다. 예약 절차 전반은 <a href="/reservation/">예약 안내</a>를
 참고하시면 됩니다.</p>
 </section>
 
 <section id="move">
 <h2>지역별 이동 기준</h2>
 <p>구리시는 동마다 위치와 접근성이 달라 이동 기준도 조금씩 차이가 있습니다.
-<a href="/gyeonggi/guri/galmae-dong/">갈매동</a>은 신도시권으로 접근 동선이 비교적 정돈되어
-있고, 동구동·<a href="/gyeonggi/guri/inchang-dong/">인창동</a>은 동구릉 인근 생활권을 함께
-고려합니다. 교문동은 시청·중심 상권과 가깝고, <a href="/gyeonggi/guri/sutaek-dong/">수택동</a>은
+<a href="/galmae-dong/">갈매동</a>은 신도시권으로 접근 동선이 비교적 정돈되어
+있고, 동구동·<a href="/inchang-dong/">인창동</a>은 동구릉 인근 생활권을 함께
+고려합니다. 교문동은 시청·중심 상권과 가깝고, <a href="/sutaek-dong/">수택동</a>은
 돌다리사거리 일대 생활권과 연결됩니다. 인접한 다산·도농 생활권으로 차량 이동이 필요한
 경우에는 추가 이동비가 발생할 수 있으며, 이는 상담 시 미리 안내됩니다. 역 기준 위치는
-<a href="/gyeonggi/guri/station/">역세권 안내</a>, 생활권 단위 구분은
-<a href="/gyeonggi/guri/area/">생활권 안내</a>를 참고하세요. 구리시 지리 정보는
+<a href="/station/">역세권 안내</a>, 생활권 단위 구분은
+<a href="/area/">생활권 안내</a>를 참고하세요. 구리시 지리 정보는
 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청</a>에서도
 확인할 수 있습니다.</p>
 </section>
@@ -304,7 +304,7 @@ HOMETAI = {
 <h2>처음 이용하는 고객 안내</h2>
 <p>홈타이가 처음이라면 어떤 순서로 진행되는지 막연하게 느껴질 수 있습니다. 전화 상담으로
 원하는 시간과 장소를 말씀하시면 나머지 절차는 차례대로 안내해 드리니 부담 갖지 않으셔도
-됩니다. 처음 이용 시 자주 묻는 내용은 <a href="/gyeonggi/guri/support/#faq">고객센터 FAQ</a>에
+됩니다. 처음 이용 시 자주 묻는 내용은 <a href="/support/#faq">고객센터 FAQ</a>에
 정리되어 있습니다.</p>
 </section>
 
@@ -358,7 +358,7 @@ HOMETAI = {
 # SUPPORT — 고객센터
 # ─────────────────────────────────────────────
 SUPPORT = {
-    "path": "gyeonggi/guri/support/",
+    "path": "support/",
     "title": "고객센터｜구리시 출장마사지·홈타이 문의·운영 기준",
     "desc": "구리시 출장마사지·홈타이 문의, 자주 묻는 질문, 제휴·기업 문의와 운영 기준 안내입니다.",
     "h1": "구리시 출장마사지 고객센터",
@@ -372,7 +372,7 @@ SUPPORT = {
 <h2>공지사항</h2>
 <p>운영 시간과 방문 가능 지역은 상황에 따라 조정될 수 있으며, 변동 사항은 예약 상담 시
 안내됩니다. 명절이나 연휴 기간에는 방문 일정이 조기 마감될 수 있으니 미리 문의해 주세요.
-요금·이동 기준 등 주요 안내는 <a href="/gyeonggi/guri/reservation/">예약 안내</a> 페이지에서
+요금·이동 기준 등 주요 안내는 <a href="/reservation/">예약 안내</a> 페이지에서
 최신 내용을 확인하실 수 있습니다.</p>
 </section>
 
@@ -380,17 +380,17 @@ SUPPORT = {
 <h2>자주 묻는 질문</h2>
 <div class="faq-item"><h3>예약은 어떻게 하나요?</h3><p>전화 상담으로 날짜·시간·장소를 말씀하시면
 일정 조율 후 방문까지 안내해 드립니다. 자세한 절차는
-<a href="/gyeonggi/guri/reservation/">예약 안내</a>를 참고하세요.</p></div>
+<a href="/reservation/">예약 안내</a>를 참고하세요.</p></div>
 <div class="faq-item"><h3>어떤 지역까지 방문하나요?</h3><p>구리시 전역과 다산·도농 등 인접
 생활권을 방문하며, 인접권은 추가 이동 기준이 적용됩니다.</p></div>
 <div class="faq-item"><h3>홈타이와 출장마사지의 차이가 궁금해요.</h3><p>둘 다 방문형 관리이며
-자세한 차이는 <a href="/gyeonggi/guri/hometai-guide/#diff">홈타이 가이드</a>에서 확인할 수
+자세한 차이는 <a href="/hometai-guide/#diff">홈타이 가이드</a>에서 확인할 수
 있습니다.</p></div>
 <div class="faq-item"><h3>개인정보는 안전한가요?</h3><p>방문에 필요한 최소 정보만 수집하고
-방문 종료 후 즉시 파기합니다. <a href="/gyeonggi/guri/privacy/">개인정보 처리방침</a>을
+방문 종료 후 즉시 파기합니다. <a href="/privacy/">개인정보 처리방침</a>을
 확인하세요.</p></div>
 <div class="faq-item"><h3>예약 변경·취소는 어떻게 하나요?</h3><p>가능한 한 빨리 전화로 연락
-주시면 일정을 조율해 드립니다. 기준은 <a href="/gyeonggi/guri/terms/">이용약관</a>을
+주시면 일정을 조율해 드립니다. 기준은 <a href="/terms/">이용약관</a>을
 참고하세요.</p></div>
 </section>
 
@@ -411,9 +411,9 @@ SUPPORT = {
 <section id="policy">
 <h2>운영 기준</h2>
 <p>본 안내는 건전한 방문형 관리 운영을 원칙으로 합니다. 서비스 소개와 운영 주체에 관한
-내용은 <a href="/gyeonggi/guri/about/">사이트 소개</a>에서, 개인정보 처리 기준은
-<a href="/gyeonggi/guri/privacy/">개인정보 처리방침</a>에서, 이용 조건과 금지행위는
-<a href="/gyeonggi/guri/terms/">이용약관</a>에서 확인하실 수 있습니다.</p>
+내용은 <a href="/about/">사이트 소개</a>에서, 개인정보 처리 기준은
+<a href="/privacy/">개인정보 처리방침</a>에서, 이용 조건과 금지행위는
+<a href="/terms/">이용약관</a>에서 확인하실 수 있습니다.</p>
 </section>
 """ + _CTA,
 }
@@ -423,7 +423,7 @@ SUPPORT = {
 # PRIVACY — 개인정보 처리방침
 # ─────────────────────────────────────────────
 PRIVACY = {
-    "path": "gyeonggi/guri/privacy/",
+    "path": "privacy/",
     "title": "개인정보 처리방침｜바로GO 구리시 방문 관리 안내",
     "desc": "바로GO 구리시 방문 관리 예약 시 수집하는 개인정보의 처리 기준과 보관·파기 방침입니다.",
     "h1": "개인정보 처리방침",
@@ -480,7 +480,7 @@ PRIVACY = {
 <section>
 <h2>7. 개인정보 처리방침의 변경</h2>
 <p>본 처리방침은 법령이나 운영 방침의 변경에 따라 수정될 수 있으며, 변경 시 본 페이지를
-통해 안내합니다. 관련 문의는 <a href="/gyeonggi/guri/support/">고객센터</a>로 연락해 주시기
+통해 안내합니다. 관련 문의는 <a href="/support/">고객센터</a>로 연락해 주시기
 바랍니다.</p>
 </section>
 """,
@@ -491,7 +491,7 @@ PRIVACY = {
 # TERMS — 이용약관
 # ─────────────────────────────────────────────
 TERMS = {
-    "path": "gyeonggi/guri/terms/",
+    "path": "terms/",
     "title": "이용약관｜바로GO 구리시 출장마사지·홈타이 안내",
     "desc": "바로GO 구리시 방문 관리 서비스 이용약관입니다. 서비스 범위와 예약·취소 기준을 안내합니다.",
     "h1": "이용약관",
@@ -516,8 +516,8 @@ TERMS = {
 <section>
 <h2>제3조 (서비스의 내용)</h2>
 <p>본 안내가 제공하는 서비스는 방문형 관리에 한하며, 안내된 범위 내에서 제공됩니다. 서비스의
-구체적인 절차와 준비사항은 <a href="/gyeonggi/guri/guide/">이용 전 확인사항</a> 및
-<a href="/gyeonggi/guri/reservation/">예약 안내</a>에 따릅니다. 안내된 범위를 벗어난 요청은
+구체적인 절차와 준비사항은 <a href="/guide/">이용 전 확인사항</a> 및
+<a href="/reservation/">예약 안내</a>에 따릅니다. 안내된 범위를 벗어난 요청은
 제공되지 않습니다.</p>
 </section>
 
@@ -552,7 +552,7 @@ TERMS = {
 <h2>제8조 (분쟁의 해결)</h2>
 <p>서비스 이용과 관련하여 분쟁이 발생한 경우, 양 당사자는 상호 신의에 따라 원만한 해결을
 위해 노력합니다. 협의가 이루어지지 않을 경우 관계 법령 및 일반 상관례에 따릅니다. 문의는
-<a href="/gyeonggi/guri/support/">고객센터</a>로 연락해 주시기 바랍니다.</p>
+<a href="/support/">고객센터</a>로 연락해 주시기 바랍니다.</p>
 </section>
 """,
 }

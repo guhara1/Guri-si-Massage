@@ -15,12 +15,12 @@ _CTA = f"""
 
 def _station(slug, name, title, desc, h1, sections):
     return {
-        "path": f"gyeonggi/guri/station/{slug}/",
+        "path": f"station/{slug}/",
         "title": title,
         "desc": desc,
         "h1": h1,
         "body": sections + PRICING + _CTA,
-        "breadcrumb": [("역세권 안내", "/gyeonggi/guri/station/"), (name, None)],
+        "breadcrumb": [("역세권 안내", "/station/"), (name, None)],
     }
 
 
@@ -37,7 +37,7 @@ _GURI_BODY = """
 
 <section>
 <h2>인접 생활권 연결</h2>
-<p>구리역을 중심으로 도보·차량 이동 거리 안에 구리전통시장, <a href="/gyeonggi/guri/inchang-dong/">인창동 생활권 방문 안내</a>, <a href="/gyeonggi/guri/sutaek-dong/">수택동 생활권 방문 안내</a>가 자리합니다. 시장 주변 상권과 주거지가 밀집해 있어 자택뿐 아니라 인근 숙소·사무실로의 방문 요청도 많은 편입니다. 생활권 단위 설명은 <a href="/gyeonggi/guri/area/guri-station-market/">구리역·구리전통시장 생활권 안내</a>에서 자세히 확인할 수 있습니다.</p>
+<p>구리역을 중심으로 도보·차량 이동 거리 안에 구리전통시장, <a href="/inchang-dong/">인창동 생활권 방문 안내</a>, <a href="/sutaek-dong/">수택동 생활권 방문 안내</a>가 자리합니다. 시장 주변 상권과 주거지가 밀집해 있어 자택뿐 아니라 인근 숙소·사무실로의 방문 요청도 많은 편입니다. 생활권 단위 설명은 <a href="/area/guri-station-market/">구리역·구리전통시장 생활권 안내</a>에서 자세히 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -47,7 +47,7 @@ _GURI_BODY = """
 
 <section>
 <h2>예약 전 확인사항</h2>
-<p>예약 전에는 방문 주소(동·건물명·층), 희망 시간, 코스 길이를 함께 알려주시면 안내가 빠릅니다. 정확한 주소가 확인되어야 도착 예정 시간과 추가 이동비 발생 여부를 미리 안내할 수 있습니다. 자세한 절차는 <a href="/gyeonggi/guri/reservation/">예약 방법 안내</a>를, 방문 장소별 준비 사항은 <a href="/gyeonggi/guri/guide/">이용 전 확인사항</a>을 참고하세요.</p>
+<p>예약 전에는 방문 주소(동·건물명·층), 희망 시간, 코스 길이를 함께 알려주시면 안내가 빠릅니다. 정확한 주소가 확인되어야 도착 예정 시간과 추가 이동비 발생 여부를 미리 안내할 수 있습니다. 자세한 절차는 <a href="/reservation/">예약 방법 안내</a>를, 방문 장소별 준비 사항은 <a href="/guide/">이용 전 확인사항</a>을 참고하세요.</p>
 </section>
 
 <section>
@@ -57,7 +57,7 @@ _GURI_BODY = """
 
 <section>
 <h2>인근 역세권과의 연계</h2>
-<p>구리역에서 한 정거장 거리 안에는 <a href="/gyeonggi/guri/station/donggureung-station/">동구릉역 인근 방문 안내</a>와 <a href="/gyeonggi/guri/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a>가 있어, 목적지에 따라 더 가까운 기준역으로 안내드리기도 합니다. 경춘선 방면은 <a href="/gyeonggi/guri/station/galmae-station/">갈매역 인근 방문 안내</a>를 참고하세요. 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EA%B5%AC%EB%A6%AC%EC%97%AD" target="_blank" rel="noopener nofollow">구리역 노선 정보</a>에서 확인할 수 있습니다.</p>
+<p>구리역에서 한 정거장 거리 안에는 <a href="/station/donggureung-station/">동구릉역 인근 방문 안내</a>와 <a href="/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a>가 있어, 목적지에 따라 더 가까운 기준역으로 안내드리기도 합니다. 경춘선 방면은 <a href="/station/galmae-station/">갈매역 인근 방문 안내</a>를 참고하세요. 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EA%B5%AC%EB%A6%AC%EC%97%AD" target="_blank" rel="noopener nofollow">구리역 노선 정보</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -102,7 +102,7 @@ _GALMAE_BODY = """
 
 <section>
 <h2>갈매신도시 생활권</h2>
-<p>갈매역 일대는 <a href="/gyeonggi/guri/galmae-dong/">갈매동 생활권 방문 안내</a>와 갈매신도시 아파트 단지가 중심을 이룹니다. 대단지 주거지가 밀집해 자택 방문 요청이 많은 권역으로, 단지명과 동·호수를 함께 알려주시면 정문 위치와 진입 동선을 미리 확인해 도착 시간을 좁게 안내할 수 있습니다. 생활권 단위 설명은 <a href="/gyeonggi/guri/area/galmae-newtown/">갈매신도시 생활권 안내</a>를 참고하세요.</p>
+<p>갈매역 일대는 <a href="/galmae-dong/">갈매동 생활권 방문 안내</a>와 갈매신도시 아파트 단지가 중심을 이룹니다. 대단지 주거지가 밀집해 자택 방문 요청이 많은 권역으로, 단지명과 동·호수를 함께 알려주시면 정문 위치와 진입 동선을 미리 확인해 도착 시간을 좁게 안내할 수 있습니다. 생활권 단위 설명은 <a href="/area/galmae-newtown/">갈매신도시 생활권 안내</a>를 참고하세요.</p>
 </section>
 
 <section>
@@ -112,7 +112,7 @@ _GALMAE_BODY = """
 
 <section>
 <h2>예약 전 확인사항</h2>
-<p>예약 시에는 단지명·동·출입 방식(공동현관 비밀번호 또는 안내 필요 여부), 희망 시간, 코스 길이를 함께 알려주시면 안내가 매끄럽습니다. 대단지의 경우 방문 차량 진입 절차가 있는 곳도 있으므로 미리 확인해 두면 도착이 지연되지 않습니다. 절차는 <a href="/gyeonggi/guri/reservation/">예약 방법 안내</a>에서 확인할 수 있습니다.</p>
+<p>예약 시에는 단지명·동·출입 방식(공동현관 비밀번호 또는 안내 필요 여부), 희망 시간, 코스 길이를 함께 알려주시면 안내가 매끄럽습니다. 대단지의 경우 방문 차량 진입 절차가 있는 곳도 있으므로 미리 확인해 두면 도착이 지연되지 않습니다. 절차는 <a href="/reservation/">예약 방법 안내</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -122,7 +122,7 @@ _GALMAE_BODY = """
 
 <section>
 <h2>인근 역세권과의 연계</h2>
-<p>갈매역은 구리시 다른 역들과 노선이 달라, 시 중심권으로 향하는 경우 <a href="/gyeonggi/guri/station/guri-station/">구리역 인근 방문 안내</a>나 <a href="/gyeonggi/guri/station/donggureung-station/">동구릉역 인근 방문 안내</a> 기준으로 이동 동선을 잡기도 합니다. 경춘선 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EA%B0%88%EB%A7%A4%EC%97%AD" target="_blank" rel="noopener nofollow">갈매역 노선 정보</a>에서 확인할 수 있습니다.</p>
+<p>갈매역은 구리시 다른 역들과 노선이 달라, 시 중심권으로 향하는 경우 <a href="/station/guri-station/">구리역 인근 방문 안내</a>나 <a href="/station/donggureung-station/">동구릉역 인근 방문 안내</a> 기준으로 이동 동선을 잡기도 합니다. 경춘선 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EA%B0%88%EB%A7%A4%EC%97%AD" target="_blank" rel="noopener nofollow">갈매역 노선 정보</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -167,7 +167,7 @@ _DONGGUREUNG_BODY = """
 
 <section>
 <h2>연결되는 생활권</h2>
-<p>동구릉역을 기준으로 <a href="/gyeonggi/guri/inchang-dong/">인창동 생활권 방문 안내</a>와 <a href="/gyeonggi/guri/donggu-dong/">동구동 생활권 방문 안내</a>, 그리고 사노동 일대가 이동 범위 안에 들어옵니다. 능 인근 도로는 우회 구간이 있어, 같은 동이라도 능을 끼고 도는 위치인지에 따라 소요 시간이 달라집니다. 생활권 단위 설명은 <a href="/gyeonggi/guri/area/inchang-donggureung/">인창동·동구릉 생활권 안내</a>에서 확인할 수 있습니다.</p>
+<p>동구릉역을 기준으로 <a href="/inchang-dong/">인창동 생활권 방문 안내</a>와 <a href="/donggu-dong/">동구동 생활권 방문 안내</a>, 그리고 사노동 일대가 이동 범위 안에 들어옵니다. 능 인근 도로는 우회 구간이 있어, 같은 동이라도 능을 끼고 도는 위치인지에 따라 소요 시간이 달라집니다. 생활권 단위 설명은 <a href="/area/inchang-donggureung/">인창동·동구릉 생활권 안내</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -177,7 +177,7 @@ _DONGGUREUNG_BODY = """
 
 <section>
 <h2>예약 전 확인사항</h2>
-<p>예약 시 방문 주소(동·건물·층), 희망 시간, 코스 길이를 알려주시면 안내가 빠릅니다. 주거지가 분산된 권역이라 정확한 위치 확인이 도착 시간 정확도에 크게 작용합니다. 방문 장소별 준비 사항은 <a href="/gyeonggi/guri/guide/">이용 전 확인사항</a>에서 함께 확인하세요.</p>
+<p>예약 시 방문 주소(동·건물·층), 희망 시간, 코스 길이를 알려주시면 안내가 빠릅니다. 주거지가 분산된 권역이라 정확한 위치 확인이 도착 시간 정확도에 크게 작용합니다. 방문 장소별 준비 사항은 <a href="/guide/">이용 전 확인사항</a>에서 함께 확인하세요.</p>
 </section>
 
 <section>
@@ -187,7 +187,7 @@ _DONGGUREUNG_BODY = """
 
 <section>
 <h2>인근 역세권과의 연계</h2>
-<p>동구릉역은 같은 8호선 별내선의 <a href="/gyeonggi/guri/station/guri-station/">구리역 인근 방문 안내</a> 및 <a href="/gyeonggi/guri/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a>와 한 노선으로 이어집니다. 목적지에 따라 더 가까운 기준역으로 안내드리기도 합니다. 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EB%8F%99%EA%B5%AC%EB%A6%89%EC%97%AD" target="_blank" rel="noopener nofollow">동구릉역 노선 정보</a>에서 확인할 수 있습니다.</p>
+<p>동구릉역은 같은 8호선 별내선의 <a href="/station/guri-station/">구리역 인근 방문 안내</a> 및 <a href="/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a>와 한 노선으로 이어집니다. 목적지에 따라 더 가까운 기준역으로 안내드리기도 합니다. 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EB%8F%99%EA%B5%AC%EB%A6%89%EC%97%AD" target="_blank" rel="noopener nofollow">동구릉역 노선 정보</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -232,7 +232,7 @@ _JANGJA_BODY = """
 
 <section>
 <h2>연결되는 생활권</h2>
-<p>장자호수공원역을 기준으로 <a href="/gyeonggi/guri/sutaek-dong/">수택동 생활권 방문 안내</a>와 토평동 일대가 이동 범위 안에 들어옵니다. 공원 주변은 아파트 단지와 상권이 섞여 있어 자택·숙소·사무실 방문 요청이 고르게 나타나는 권역입니다. 생활권 단위 설명은 <a href="/gyeonggi/guri/area/jangja-lake-park-topyeong/">장자호수공원·토평 생활권 안내</a>에서 확인할 수 있습니다.</p>
+<p>장자호수공원역을 기준으로 <a href="/sutaek-dong/">수택동 생활권 방문 안내</a>와 토평동 일대가 이동 범위 안에 들어옵니다. 공원 주변은 아파트 단지와 상권이 섞여 있어 자택·숙소·사무실 방문 요청이 고르게 나타나는 권역입니다. 생활권 단위 설명은 <a href="/area/jangja-lake-park-topyeong/">장자호수공원·토평 생활권 안내</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -242,7 +242,7 @@ _JANGJA_BODY = """
 
 <section>
 <h2>예약 전 확인사항</h2>
-<p>예약 시 단지명 또는 건물명·동·층, 희망 시간, 코스 길이를 알려주시면 안내가 매끄럽습니다. 공원 주변 대단지는 방문 차량 진입 절차가 있는 곳도 있어 미리 확인해 두면 도착이 지연되지 않습니다. 자세한 절차는 <a href="/gyeonggi/guri/reservation/">예약 방법 안내</a>를 참고하세요.</p>
+<p>예약 시 단지명 또는 건물명·동·층, 희망 시간, 코스 길이를 알려주시면 안내가 매끄럽습니다. 공원 주변 대단지는 방문 차량 진입 절차가 있는 곳도 있어 미리 확인해 두면 도착이 지연되지 않습니다. 자세한 절차는 <a href="/reservation/">예약 방법 안내</a>를 참고하세요.</p>
 </section>
 
 <section>
@@ -252,7 +252,7 @@ _JANGJA_BODY = """
 
 <section>
 <h2>인근 역세권과의 연계</h2>
-<p>장자호수공원역은 같은 8호선 별내선의 <a href="/gyeonggi/guri/station/guri-station/">구리역 인근 방문 안내</a> 및 <a href="/gyeonggi/guri/station/donggureung-station/">동구릉역 인근 방문 안내</a>와 한 노선으로 이어집니다. 수택동 외곽이나 왕숙천 방면은 <a href="/gyeonggi/guri/station/dasan-nearby-area/">다산역 인접 생활권 안내</a>도 함께 참고하세요. 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EC%9E%A5%EC%9E%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%EC%97%AD" target="_blank" rel="noopener nofollow">장자호수공원역 노선 정보</a>에서 확인할 수 있습니다.</p>
+<p>장자호수공원역은 같은 8호선 별내선의 <a href="/station/guri-station/">구리역 인근 방문 안내</a> 및 <a href="/station/donggureung-station/">동구릉역 인근 방문 안내</a>와 한 노선으로 이어집니다. 수택동 외곽이나 왕숙천 방면은 <a href="/station/dasan-nearby-area/">다산역 인접 생활권 안내</a>도 함께 참고하세요. 노선 상세는 <a href="https://ko.wikipedia.org/wiki/%EC%9E%A5%EC%9E%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%EC%97%AD" target="_blank" rel="noopener nofollow">장자호수공원역 노선 정보</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -297,17 +297,17 @@ _DASAN_BODY = """
 
 <section>
 <h2>수택동·왕숙천 방면 이동 기준</h2>
-<p>다산역 인접 권역과 구리시 사이에는 왕숙천이 흐르며, <a href="/gyeonggi/guri/sutaek-dong/">수택동 생활권 방문 안내</a>가 가장 가까운 구리 생활권입니다. 하천을 건너는 다리 위치에 따라 진입 동선이 달라지므로, 정확한 주소를 확인해야 도착 시간을 좁게 안내할 수 있습니다. 하천 인접 권역 설명은 <a href="/gyeonggi/guri/area/wangsukcheon-sutaek/">왕숙천·수택 인접 생활권 안내</a>에서 확인할 수 있습니다.</p>
+<p>다산역 인접 권역과 구리시 사이에는 왕숙천이 흐르며, <a href="/sutaek-dong/">수택동 생활권 방문 안내</a>가 가장 가까운 구리 생활권입니다. 하천을 건너는 다리 위치에 따라 진입 동선이 달라지므로, 정확한 주소를 확인해야 도착 시간을 좁게 안내할 수 있습니다. 하천 인접 권역 설명은 <a href="/area/wangsukcheon-sutaek/">왕숙천·수택 인접 생활권 안내</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
 <h2>이동 시 유의할 점</h2>
-<p>다산신도시는 대단지가 밀집해 있어 단지별 진입로와 공동현관 절차가 제각각입니다. 또한 시 경계를 넘는 위치는 구리 중심권보다 이동 거리가 길어, 추가 이동비가 발생할 가능성이 높습니다. 다산·구리 경계 권역 설명은 <a href="/gyeonggi/guri/area/dasan-guri-nearby/">다산·구리 인접 생활권 안내</a>를 참고하세요.</p>
+<p>다산신도시는 대단지가 밀집해 있어 단지별 진입로와 공동현관 절차가 제각각입니다. 또한 시 경계를 넘는 위치는 구리 중심권보다 이동 거리가 길어, 추가 이동비가 발생할 가능성이 높습니다. 다산·구리 경계 권역 설명은 <a href="/area/dasan-guri-nearby/">다산·구리 인접 생활권 안내</a>를 참고하세요.</p>
 </section>
 
 <section>
 <h2>예약 전 확인사항</h2>
-<p>예약 시 단지명·동·층, 희망 시간, 코스 길이를 알려주시면 안내가 빠릅니다. 시 경계를 넘는 위치는 방문 가능 여부와 도착 시간을 출발 전에 먼저 확인해 드리니, 정확한 주소를 함께 전달해 주세요. 절차는 <a href="/gyeonggi/guri/reservation/">예약 방법 안내</a>에서 확인할 수 있습니다.</p>
+<p>예약 시 단지명·동·층, 희망 시간, 코스 길이를 알려주시면 안내가 빠릅니다. 시 경계를 넘는 위치는 방문 가능 여부와 도착 시간을 출발 전에 먼저 확인해 드리니, 정확한 주소를 함께 전달해 주세요. 절차는 <a href="/reservation/">예약 방법 안내</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -317,7 +317,7 @@ _DASAN_BODY = """
 
 <section>
 <h2>구리 중심권 역세권과의 연계</h2>
-<p>다산역 인접 권역에서 구리 중심으로 향하는 경우 <a href="/gyeonggi/guri/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a>나 <a href="/gyeonggi/guri/station/guri-station/">구리역 인근 방문 안내</a> 기준으로 동선을 잡는 편이 정확합니다. 같은 경의중앙선 인접 권역인 <a href="/gyeonggi/guri/station/donong-nearby-area/">도농역 인접 생활권 안내</a>도 함께 참고하세요. 구리시 행정 정보는 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청 누리집</a>에서 확인할 수 있습니다.</p>
+<p>다산역 인접 권역에서 구리 중심으로 향하는 경우 <a href="/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a>나 <a href="/station/guri-station/">구리역 인근 방문 안내</a> 기준으로 동선을 잡는 편이 정확합니다. 같은 경의중앙선 인접 권역인 <a href="/station/donong-nearby-area/">도농역 인접 생활권 안내</a>도 함께 참고하세요. 구리시 행정 정보는 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청 누리집</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -362,7 +362,7 @@ _DONONG_BODY = """
 
 <section>
 <h2>인창동·구리 중심권 이동 기준</h2>
-<p>도농역 인접 권역에서 가장 가까운 구리 생활권은 <a href="/gyeonggi/guri/inchang-dong/">인창동 생활권 방문 안내</a>이며, 그 안쪽으로 구리 중심권이 이어집니다. 인접 시 경계를 따라 도로가 연결되어 있어, 정확한 주소를 확인하면 가장 가까운 진입로 기준으로 도착 시간을 안내할 수 있습니다. 인창동 권역 설명은 <a href="/gyeonggi/guri/area/inchang-donggureung/">인창동·동구릉 생활권 안내</a>를 참고하세요.</p>
+<p>도농역 인접 권역에서 가장 가까운 구리 생활권은 <a href="/inchang-dong/">인창동 생활권 방문 안내</a>이며, 그 안쪽으로 구리 중심권이 이어집니다. 인접 시 경계를 따라 도로가 연결되어 있어, 정확한 주소를 확인하면 가장 가까운 진입로 기준으로 도착 시간을 안내할 수 있습니다. 인창동 권역 설명은 <a href="/area/inchang-donggureung/">인창동·동구릉 생활권 안내</a>를 참고하세요.</p>
 </section>
 
 <section>
@@ -372,7 +372,7 @@ _DONONG_BODY = """
 
 <section>
 <h2>예약 전 확인사항</h2>
-<p>예약 시 방문 주소(동·건물·층), 희망 시간, 코스 길이를 알려주시면 안내가 빠릅니다. 시 경계 인접 위치는 방문 가능 여부와 도착 예정 시간을 출발 전에 먼저 확인해 드리니, 정확한 주소를 함께 전달해 주세요. 방문 장소별 준비 사항은 <a href="/gyeonggi/guri/guide/">이용 전 확인사항</a>에서 확인할 수 있습니다.</p>
+<p>예약 시 방문 주소(동·건물·층), 희망 시간, 코스 길이를 알려주시면 안내가 빠릅니다. 시 경계 인접 위치는 방문 가능 여부와 도착 예정 시간을 출발 전에 먼저 확인해 드리니, 정확한 주소를 함께 전달해 주세요. 방문 장소별 준비 사항은 <a href="/guide/">이용 전 확인사항</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -382,7 +382,7 @@ _DONONG_BODY = """
 
 <section>
 <h2>구리 중심권 역세권과의 연계</h2>
-<p>도농역 인접 권역에서 구리 중심으로 향하는 경우 <a href="/gyeonggi/guri/station/guri-station/">구리역 인근 방문 안내</a>나 <a href="/gyeonggi/guri/station/donggureung-station/">동구릉역 인근 방문 안내</a> 기준으로 동선을 잡는 편이 정확합니다. 왕숙천 건너 권역은 <a href="/gyeonggi/guri/station/dasan-nearby-area/">다산역 인접 생활권 안내</a>도 함께 참고하세요. 경의중앙선 정보는 <a href="https://www.letskorail.com" target="_blank" rel="noopener nofollow">코레일 경의중앙선 안내</a>에서 확인할 수 있습니다.</p>
+<p>도농역 인접 권역에서 구리 중심으로 향하는 경우 <a href="/station/guri-station/">구리역 인근 방문 안내</a>나 <a href="/station/donggureung-station/">동구릉역 인근 방문 안내</a> 기준으로 동선을 잡는 편이 정확합니다. 왕숙천 건너 권역은 <a href="/station/dasan-nearby-area/">다산역 인접 생활권 안내</a>도 함께 참고하세요. 경의중앙선 정보는 <a href="https://www.letskorail.com" target="_blank" rel="noopener nofollow">코레일 경의중앙선 안내</a>에서 확인할 수 있습니다.</p>
 </section>
 
 <section>
@@ -433,12 +433,12 @@ _HUB_BODY = """
 <section>
 <h2>역세권별 안내 바로가기</h2>
 <ul class="card-grid">
-  <li><a href="/gyeonggi/guri/station/guri-station/">구리역 인근 방문 안내</a> — 경의중앙선·8호선 환승, 구리전통시장·인창동·수택동 생활권</li>
-  <li><a href="/gyeonggi/guri/station/galmae-station/">갈매역 인근 방문 안내</a> — 경춘선, 갈매동·갈매신도시 생활권</li>
-  <li><a href="/gyeonggi/guri/station/donggureung-station/">동구릉역 인근 방문 안내</a> — 8호선 별내선, 인창동·동구동·사노동 생활권</li>
-  <li><a href="/gyeonggi/guri/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a> — 8호선 별내선, 수택동·토평 생활권</li>
-  <li><a href="/gyeonggi/guri/station/dasan-nearby-area/">다산역 인접 생활권 안내</a> — 수택동·왕숙천 방면 이동 기준</li>
-  <li><a href="/gyeonggi/guri/station/donong-nearby-area/">도농역 인접 생활권 안내</a> — 인창동·구리 중심권 이동 기준</li>
+  <li><a href="/station/guri-station/">구리역 인근 방문 안내</a> — 경의중앙선·8호선 환승, 구리전통시장·인창동·수택동 생활권</li>
+  <li><a href="/station/galmae-station/">갈매역 인근 방문 안내</a> — 경춘선, 갈매동·갈매신도시 생활권</li>
+  <li><a href="/station/donggureung-station/">동구릉역 인근 방문 안내</a> — 8호선 별내선, 인창동·동구동·사노동 생활권</li>
+  <li><a href="/station/jangja-lake-park-station/">장자호수공원역 인근 방문 안내</a> — 8호선 별내선, 수택동·토평 생활권</li>
+  <li><a href="/station/dasan-nearby-area/">다산역 인접 생활권 안내</a> — 수택동·왕숙천 방면 이동 기준</li>
+  <li><a href="/station/donong-nearby-area/">도농역 인접 생활권 안내</a> — 인창동·구리 중심권 이동 기준</li>
 </ul>
 </section>
 
@@ -449,12 +449,12 @@ _HUB_BODY = """
 
 <section>
 <h2>예약 전 공통 확인사항</h2>
-<p>어느 역세권이든 예약 시에는 방문 주소, 희망 시간, 코스 길이를 함께 알려주시면 도착 예정 시간과 추가 이동비 발생 여부를 정확히 안내받을 수 있습니다. 절차는 <a href="/gyeonggi/guri/reservation/">예약 방법 안내</a>에서, 방문 장소별 준비 사항은 <a href="/gyeonggi/guri/guide/">이용 전 확인사항</a>에서 확인하세요. 동 단위 안내가 필요하면 <a href="/gyeonggi/guri/inchang-dong/">인창동</a>, <a href="/gyeonggi/guri/sutaek-dong/">수택동</a>, <a href="/gyeonggi/guri/galmae-dong/">갈매동</a> 페이지도 함께 참고할 수 있습니다.</p>
+<p>어느 역세권이든 예약 시에는 방문 주소, 희망 시간, 코스 길이를 함께 알려주시면 도착 예정 시간과 추가 이동비 발생 여부를 정확히 안내받을 수 있습니다. 절차는 <a href="/reservation/">예약 방법 안내</a>에서, 방문 장소별 준비 사항은 <a href="/guide/">이용 전 확인사항</a>에서 확인하세요. 동 단위 안내가 필요하면 <a href="/inchang-dong/">인창동</a>, <a href="/sutaek-dong/">수택동</a>, <a href="/galmae-dong/">갈매동</a> 페이지도 함께 참고할 수 있습니다.</p>
 </section>
 
 <section>
 <h2>역세권 기준으로 안내하는 이유</h2>
-<p>구리시는 면적에 비해 노선과 역이 고르게 분포해, 같은 동이라도 어느 역을 기준으로 삼느냐에 따라 이동 동선과 소요 시간이 크게 달라집니다. 본 안내가 동 단위 페이지와 별도로 역세권 기준 페이지를 두는 이유가 여기에 있습니다. 역은 도로망이 모이는 거점이라 진입로와 주변 도로 흐름을 예측하기 쉽고, 방문하실 위치에서 가장 가까운 기준역을 정하면 도착 예정 시간을 더 좁게 안내할 수 있습니다. 특히 8호선 별내선이 새로 지나는 구간은 역 주변 도로가 정비되면서 차량 동선이 한결 명확해졌습니다. 동 단위 생활 정보가 필요하면 <a href="/gyeonggi/guri/inchang-dong/">인창동</a>·<a href="/gyeonggi/guri/sutaek-dong/">수택동</a> 페이지를, 행정 정보는 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청 누리집</a>을 함께 참고하세요.</p>
+<p>구리시는 면적에 비해 노선과 역이 고르게 분포해, 같은 동이라도 어느 역을 기준으로 삼느냐에 따라 이동 동선과 소요 시간이 크게 달라집니다. 본 안내가 동 단위 페이지와 별도로 역세권 기준 페이지를 두는 이유가 여기에 있습니다. 역은 도로망이 모이는 거점이라 진입로와 주변 도로 흐름을 예측하기 쉽고, 방문하실 위치에서 가장 가까운 기준역을 정하면 도착 예정 시간을 더 좁게 안내할 수 있습니다. 특히 8호선 별내선이 새로 지나는 구간은 역 주변 도로가 정비되면서 차량 동선이 한결 명확해졌습니다. 동 단위 생활 정보가 필요하면 <a href="/inchang-dong/">인창동</a>·<a href="/sutaek-dong/">수택동</a> 페이지를, 행정 정보는 <a href="https://www.guri.go.kr" target="_blank" rel="noopener nofollow">구리시청 누리집</a>을 함께 참고하세요.</p>
 </section>
 
 <section>
@@ -472,7 +472,7 @@ _HUB_BODY = """
 """
 
 HUB = {
-    "path": "gyeonggi/guri/station/",
+    "path": "station/",
     "title": "구리시 역세권 안내｜구리역·갈매역·동구릉역·장자호수공원역",
     "desc": "구리역, 갈매역, 동구릉역, 장자호수공원역 등 구리시 역세권 방문 관리 안내입니다.",
     "h1": "구리시 역세권 안내",

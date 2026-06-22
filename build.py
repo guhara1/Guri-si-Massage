@@ -249,31 +249,31 @@ def render_page(page: dict) -> str:
     <nav class="footer-col" aria-label="지역 안내">
       <p class="footer-title">지역</p>
       <ul>
-        <li><a href="/gyeonggi/guri/region/">지역별 안내</a></li>
-        <li><a href="/gyeonggi/guri/station/">역세권 안내</a></li>
-        <li><a href="/gyeonggi/guri/area/">생활권 안내</a></li>
-        <li><a href="/gyeonggi/guri/galmae-dong/">갈매동</a></li>
-        <li><a href="/gyeonggi/guri/sutaek-dong/">수택동</a></li>
+        <li><a href="/region/">지역별 안내</a></li>
+        <li><a href="/station/">역세권 안내</a></li>
+        <li><a href="/area/">생활권 안내</a></li>
+        <li><a href="/galmae-dong/">갈매동</a></li>
+        <li><a href="/sutaek-dong/">수택동</a></li>
       </ul>
     </nav>
     <nav class="footer-col" aria-label="이용 안내">
       <p class="footer-title">이용 안내</p>
       <ul>
-        <li><a href="/gyeonggi/guri/reservation/">예약 안내</a></li>
-        <li><a href="/gyeonggi/guri/guide/">이용 전 확인사항</a></li>
-        <li><a href="/gyeonggi/guri/hometai-guide/">홈타이 이용 가이드</a></li>
-        <li><a href="/gyeonggi/guri/support/">고객센터</a></li>
-        <li><a href="/gyeonggi/guri/support/#faq">자주 묻는 질문</a></li>
+        <li><a href="/reservation/">예약 안내</a></li>
+        <li><a href="/guide/">이용 전 확인사항</a></li>
+        <li><a href="/hometai-guide/">홈타이 이용 가이드</a></li>
+        <li><a href="/support/">고객센터</a></li>
+        <li><a href="/support/#faq">자주 묻는 질문</a></li>
       </ul>
     </nav>
     <nav class="footer-col" aria-label="정책 및 기준">
       <p class="footer-title">정책</p>
       <ul>
-        <li><a href="/gyeonggi/guri/about/">사이트 소개</a></li>
-        <li><a href="/gyeonggi/guri/privacy/">개인정보 처리방침</a></li>
-        <li><a href="/gyeonggi/guri/terms/">이용약관</a></li>
-        <li><a href="/gyeonggi/guri/guide/#prohibited">불법·선정적 서비스 불가</a></li>
-        <li><a href="/gyeonggi/guri/support/#biz">제휴·기업 문의</a></li>
+        <li><a href="/about/">사이트 소개</a></li>
+        <li><a href="/privacy/">개인정보 처리방침</a></li>
+        <li><a href="/terms/">이용약관</a></li>
+        <li><a href="/guide/#prohibited">불법·선정적 서비스 불가</a></li>
+        <li><a href="/support/#biz">제휴·기업 문의</a></li>
       </ul>
     </nav>
   </div>
@@ -333,21 +333,7 @@ def build() -> None:
     # .nojekyll (GitHub Pages)
     open(os.path.join(ROOT, ".nojekyll"), "w").close()
 
-    # 루트(/) → /gyeonggi/guri/ 리다이렉트 (구리 전용 배포 시 진입점)
-    guri_url = BASE_URL.rstrip("/") + GURI
-    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(
-            "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n"
-            "<meta charset=\"utf-8\">\n"
-            f"<meta http-equiv=\"refresh\" content=\"0; url={GURI}\">\n"
-            "<meta name=\"robots\" content=\"noindex,follow\">\n"
-            f"<link rel=\"canonical\" href=\"{guri_url}\">\n"
-            f"<title>{BRAND} · 구리시 출장마사지·홈타이 안내</title>\n"
-            "</head>\n<body>\n"
-            f"<p><a href=\"{GURI}\">구리시 출장마사지·홈타이 안내로 이동</a></p>\n"
-            f"<script>location.replace(\"{GURI}\");</script>\n"
-            "</body>\n</html>\n"
-        )
+    # 메인 페이지(path="")가 루트 index.html 로 직접 생성되므로 별도 리다이렉트는 두지 않는다.
 
     width = max(len(p) for p, _, _ in report)
     print(f"{'PATH'.ljust(width)}  CHARS  ROBOTS")

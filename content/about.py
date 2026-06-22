@@ -2,7 +2,7 @@
 from .site import BRAND, PHONE, PHONE_DISPLAY
 
 PAGE = {
-    "path": "gyeonggi/guri/about/",
+    "path": "about/",
     "title": f"{BRAND}｜구리시 출장마사지·홈타이 서비스 소개",
     "desc": "바로GO가 구리시 출장마사지·홈타이 정보를 전달하는 방식과 편집 기준을 소개합니다.",
     "h1": f"{BRAND} — 구리시 출장마사지 안내 사이트 소개",
@@ -58,7 +58,7 @@ target="_blank" rel="noopener">구리시청 공식 정보</a>와 공개 행정 �
 <li>가격은 코스별 기본 요금을 기준으로 표기하며, 추가 상담이 필요한 항목은 별도로 명시합니다.</li>
 <li>성인 대상 합법적 방문 마사지·홈타이 서비스만 안내합니다. 불법·성적 서비스는 일절
   안내하지 않습니다.</li>
-<li>이용자 개인정보는 <a href="/gyeonggi/guri/privacy/">개인정보 처리방침</a>에 따라
+<li>이용자 개인정보는 <a href="/privacy/">개인정보 처리방침</a>에 따라
   엄격히 관리합니다.</li>
 </ul>
 </section>
@@ -109,7 +109,7 @@ target="_blank" rel="noopener">구리시청 공식 정보</a>와 공개 행정 �
 <p>사이트 내용에 오류가 있거나 정보 수정을 요청하시려면 전화 문의를 이용해 주세요.</p>
 <p>예약 문의도 동일 번호로 받습니다.</p>
 <p><a class="cta-phone" href="tel:{PHONE}">{PHONE_DISPLAY}</a></p>
-<p>구리시 출장마사지 관련 지역 안내는 <a href="/gyeonggi/guri/">구리시 홈타이 안내 메인</a>에서
+<p>구리시 출장마사지 관련 지역 안내는 <a href="/">구리시 홈타이 안내 메인</a>에서
 시작하실 수 있습니다.</p>
 </section>
 """,

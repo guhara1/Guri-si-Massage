@@ -19,7 +19,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from content import PAGES
 from content.site import (BASE_URL, BRAND, NAV, PHONE, PHONE_DISPLAY,
-                          TELEGRAM_BUILD, TELEGRAM_PARTNER, GURI, INDEXNOW_KEY)
+                          TELEGRAM_BUILD, TELEGRAM_PARTNER, GURI, INDEXNOW_KEY,
+                          NAVER_SITE_VERIFICATION, RATING_VALUE, RATING_COUNT,
+                          REVIEWS)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 MIN_INDEX_CHARS = 2000
@@ -107,16 +109,52 @@ def render_toc(items) -> str:
 
 
 def _json_escape(s: str) -> str:
-    return s.replace("\\", "\\\\").replace('"', '\\"')
+    return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ")
+
+
+def _faq_from_body(body_html: str) -> str:
+    """본문의 .faq 섹션(<div class="faq-item"><h3>질문</h3><p>답변</p>)을
+    FAQPage 구조화 데이터 노드로 자동 변환한다. 없으면 빈 문자열."""
+    qa = re.findall(
+        r'<div class="faq-item">\s*<h3>(.*?)</h3>\s*<p>(.*?)</p>',
+        body_html, flags=re.S,
+    )
+    if not qa:
+        return ""
+    entities = ",".join(
+        f'{{"@type":"Question","name":"{_json_escape(re.sub(r"<[^>]+>", "", q).strip())}",'
+        f'"acceptedAnswer":{{"@type":"Answer","text":"{_json_escape(re.sub(r"<[^>]+>", "", a).strip())}"}}}}'
+        for q, a in qa
+    )
+    return f',\n{{"@type":"FAQPage","mainEntity":[{entities}]}}'
+
+
+def _review_nodes() -> str:
+    """전 페이지 공통 후기·평점(AggregateRating·Review). Service 노드에 부속된다."""
+    rating = (
+        f'"aggregateRating":{{"@type":"AggregateRating",'
+        f'"ratingValue":"{RATING_VALUE}","reviewCount":"{RATING_COUNT}",'
+        f'"bestRating":"5","worstRating":"1"}}'
+    )
+    reviews = ",".join(
+        f'{{"@type":"Review",'
+        f'"author":{{"@type":"Person","name":"{_json_escape(name)}"}},'
+        f'"reviewRating":{{"@type":"Rating","ratingValue":"{score}","bestRating":"5","worstRating":"1"}},'
+        f'"reviewBody":"{_json_escape(text)}"}}'
+        for name, score, text in REVIEWS
+    )
+    return rating + f',"review":[{reviews}]'
 
 
 def render_structured_data(page: dict, canonical: str) -> str:
-    """페이지마다 Organization · WebPage · BreadcrumbList · ImageObject 구조화 데이터를 자동 생성한다.
+    """페이지마다 Organization · WebPage · BreadcrumbList · ImageObject · Service(후기·평점) ·
+    FAQPage(본문 FAQ 자동 추출) 구조화 데이터를 생성한다.
     오프라인 사업장 주소가 없는 방문형 사이트이므로 LocalBusiness 계열은 사용하지 않는다."""
     title = _json_escape(page["title"])
     desc = _json_escape(page["desc"])
     img = BASE_URL.rstrip("/") + "/assets/og-image.png"
     org = BASE_URL.rstrip("/") + "/#org"
+    svc = BASE_URL.rstrip("/") + "/#service"
 
     # BreadcrumbList — 홈 + 페이지별 경로
     crumbs = page.get("breadcrumb") or []
@@ -132,11 +170,15 @@ def render_structured_data(page: dict, canonical: str) -> str:
         for i, (name, url) in enumerate(items)
     )
 
+    faq_node = _faq_from_body(page.get("body", ""))
+    review_data = _review_nodes()
+
     return f"""<script type="application/ld+json">
 {{"@context":"https://schema.org","@graph":[
 {{"@type":"Organization","@id":"{org}","name":"{BRAND}","url":"{BASE_URL.rstrip('/') + GURI}","telephone":"{PHONE}","areaServed":{{"@type":"AdministrativeArea","name":"경기도 구리시"}},"logo":{{"@type":"ImageObject","url":"{BASE_URL.rstrip('/')}/assets/icon-512.png"}}}},
+{{"@type":"Service","@id":"{svc}","serviceType":"출장마사지·홈타이 방문 관리","provider":{{"@id":"{org}"}},"areaServed":{{"@type":"AdministrativeArea","name":"경기도 구리시"}},"name":"{_json_escape(BRAND)} 구리시 방문 관리","url":"{BASE_URL.rstrip('/') + GURI}",{review_data}}},
 {{"@type":"WebPage","@id":"{canonical}#webpage","url":"{canonical}","name":"{title}","description":"{desc}","isPartOf":{{"@id":"{org}"}},"inLanguage":"ko-KR","primaryImageOfPage":{{"@type":"ImageObject","url":"{img}","width":1200,"height":630}}}},
-{{"@type":"BreadcrumbList","itemListElement":[{bc_items}]}}
+{{"@type":"BreadcrumbList","itemListElement":[{bc_items}]}}{faq_node}
 ]}}
 </script>
 """
@@ -160,6 +202,13 @@ def render_page(page: dict) -> str:
         else '<meta name="robots" content="index,follow">'
     )
     canonical = BASE_URL.rstrip("/") + "/" + path
+
+    # 네이버 사이트 소유 확인 — 메인 페이지(path="")에만 노출
+    if path == "" and NAVER_SITE_VERIFICATION:
+        extra_head = (
+            f'<meta name="naver-site-verification" content="{NAVER_SITE_VERIFICATION}">\n'
+            + extra_head
+        )
 
     # 히어로가 있는 페이지(메인)는 H1을 히어로 안에서 출력한다.
     if hero:
